@@ -12,10 +12,19 @@ public class CPUPlayer extends Player
 		difficulty = diffic;
 	}
 
-	void makeAmove()
+	void makeAmove(Board b)
 	{
 		Random rand = new Random();
-		int cell = rand.nextInt(9);
+		boolean error = false;
+		do
+		{
+			error = false;
+			int cell = rand.nextInt(9);
+			if(b.isOccupied(cell))
+				error = true;
+			else
+				b.fillCell(cell, symbol);
+		}while(error == true);
 	}
 
 	void setDifficulty(String diff)

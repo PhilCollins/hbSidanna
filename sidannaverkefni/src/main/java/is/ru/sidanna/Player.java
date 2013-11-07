@@ -16,5 +16,10 @@ public abstract class Player
 		return symbol;
 	}
 	
-	abstract void makeAmove();
+	abstract void makeAmove(Board b);
+
+	String getName()
+	{
+		return playerName;
+	}
 }

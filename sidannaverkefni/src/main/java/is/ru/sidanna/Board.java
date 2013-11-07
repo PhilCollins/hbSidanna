@@ -17,14 +17,9 @@ public class Board
 		resetBoard();
 	}
 
-	boolean fillCell(int cellNumber, char symbol)
+	void fillCell(int cellNumber, char symbol)
 	{
-		if(cellNumber < 0 || cellNumber > 8)
-			return false;
-		else if(boardCells[cellNumber] == ' ')
-			return false;
 		boardCells[cellNumber] = symbol;
-		return true;
 	}
 
 	boolean hasWon(char symbol)
@@ -36,10 +31,39 @@ public class Board
 		}
 		return false;
 	}
+	
+	boolean isBoardFull()
+	{
+		int counter = 0;
+		for(int i = 0; i < boardCells.length; i++)
+		{
+			if(boardCells[i] != ' ')
+				counter++;
+		}
+		if(counter == boardCells.length)
+			return true;
+		return false;
+	}
 
 	void resetBoard()
 	{
 		for(int i = 0; i < boardCells.length; i++)
 			boardCells[i] = ' ';
+	}
+
+	void printBoard()
+	{
+		System.out.println(" " + boardCells[0] + " | " + boardCells[1] + " | " + boardCells[2]);
+		System.out.println("---+---+---");
+		System.out.println(" " + boardCells[3] + " | " + boardCells[4] + " | " + boardCells[5]);
+		System.out.println("---+---+---");
+		System.out.println(" " + boardCells[6] + " | " + boardCells[7] + " | " + boardCells[8]);
+	}
+
+	boolean isOccupied(int cell)
+	{
+		if(boardCells[cell] != ' ')
+			return true;
+		return false;
 	}
 }

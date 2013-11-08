@@ -66,4 +66,50 @@ public class Board
 			return true;
 		return false;
 	}
+
+	int isAbleToWin(char symbol)
+	{
+		int cell = -1;
+		for(int i = 0; i < winningConditions.length; i++)
+		{
+			if (boardCells[winningConditions[i][0]] == symbol && boardCells[winningConditions[i][1]] == symbol && boardCells[winningConditions[i][2]] == ' ') 
+				cell = winningConditions[i][2];
+        		else if (boardCells[winningConditions[i][0]] == symbol && boardCells[winningConditions[i][2]] == symbol && boardCells[winningConditions[i][1]] == ' ') 
+           			cell = winningConditions[i][1];
+        		else if (boardCells[winningConditions[i][1]] == symbol && boardCells[winningConditions[i][2]] == symbol && boardCells[winningConditions[i][0]] == ' ') 
+            			cell = winningConditions[i][0];
+		}
+		return cell;
+	}
+
+	int checkForFork(char symbol)
+	{
+		for(int i = 0; i < boardCells.length; i++)
+		{
+			if(boardCells[i] == ' ')
+			{
+				if(this.winningScenarios(i, symbol) > 1)
+					return i;
+			}
+		}
+		return -1;
+	}
+
+	int winningScenarios(int cell, char symbol)
+	{
+		int counter = 0;
+		char[] newBoard = new char[boardCells.length];
+		System.arraycopy(boardCells, 0, newBoard, 0, boardCells.length);
+		newBoard[cell] = symbol;
+		for(int i = 0; i < winningConditions.length; i++)
+		{
+			        if (newBoard[winningConditions[i][0]] == symbol && newBoard[winningConditions[i][1]] == symbol && newBoard[winningConditions[i][2]] == ' ')
+            				counter++;
+        			else if (newBoard[winningConditions[i][0]] == symbol && newBoard[winningConditions[i][2]] == symbol && newBoard[winningConditions[i][1]] == ' ')
+            				counter++;
+        			else if (newBoard[winningConditions[i][1]] == symbol && newBoard[winningConditions[i][2]] == symbol && newBoard[winningConditions[i][0]] == ' ')
+            				counter++;
+		}
+		return counter;
+	}
 }

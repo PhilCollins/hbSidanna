@@ -25,13 +25,13 @@ public class Tictactoe
 			System.out.println("Playing against human..");
 			p2 = new HumanPlayer("Player2", 'O');
 		}
-
+		board.printBoard();
 		do
 		{
-			board.printBoard();
 			System.out.println(p1.getName() + "'s move..");
 			p1.makeAmove(board);
 			board.printBoard();
+			System.out.println("");
 			if(board.hasWon(p1.getSymbol()))
 			{
 				System.out.println("Omg, " + p1.getName() + " has won! What a genius!");
@@ -45,6 +45,7 @@ public class Tictactoe
 			System.out.println(p2.getName() + "'s move..");
 			p2.makeAmove(board);
 			board.printBoard();
+			System.out.println("");
 			if(board.hasWon(p2.getSymbol()))
 			{
 				System.out.println("Omg, " + p2.getName() + " has won! What a genius!");

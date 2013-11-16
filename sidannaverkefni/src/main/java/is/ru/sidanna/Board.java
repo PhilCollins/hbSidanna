@@ -19,6 +19,37 @@ public class Board
 		resetBoard();	// We make sure all cells on the board is what we considered empty, i.e: ' '
 	}
 
+
+	void incP1()
+	{
+		p1wins++;
+	}
+
+	void incP2()
+	{
+		p2wins++;
+	}
+
+	void incTies()
+	{
+		ties++;
+	}
+
+	int getScoreP1()
+	{
+		return p1wins;
+	}
+
+	int getScoreP2()
+	{
+		return p2wins;
+	}
+
+	int getTies()
+	{
+		return ties;
+	}
+
 	// Fill a specific cell of our board with a specific symbol
 	void fillCell(int cellNumber, char symbol)
 	{

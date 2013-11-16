@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class HumanPlayer extends Player
 {
+	// Constructor
 	HumanPlayer(String name, char symbol)
 	{
 		super(name, symbol);
 	}
 
-	void  makeAmove(Board b)
+	// Make the player make a move
+	void makeAmove(Board b)
 	{
 		Scanner reader = new Scanner(System.in);
 		boolean error = false;
@@ -31,6 +33,6 @@ public class HumanPlayer extends Player
 			}
 			else
 				b.fillCell(cell, symbol);
-		}while(error == true);
+		}while(error == true); // We ask the player again and again to select a new cell if his previous pick was erronious
 	}
 }

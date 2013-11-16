@@ -10,6 +10,8 @@ public class BoardTest {
 
         @Test
         public void initialization() {
+
+		// Check that all cells in the board are instantiated as empty(' ')
                 Board b = new Board();
 		for(int i = 0; i < b.boardCells.length; i++)
 		{
@@ -19,6 +21,8 @@ public class BoardTest {
 
 	@Test
 	public void isOcc() {
+		// Tests for the isOccupied function
+
 		Board b = new Board();
 		for(int i = 0; i < b.boardCells.length; i++)
 		{
@@ -33,6 +37,7 @@ public class BoardTest {
 
         @Test
         public void hasWon() {
+		// Checks for the hasWon function
                 Board b = new Board();
 		assertEquals(false, b.hasWon('X'));
 		assertEquals(false, b.hasWon('O'));
@@ -51,7 +56,8 @@ public class BoardTest {
 
         @Test
         public void boardFull()
-	{
+	{	
+		// Tests for the isBoardFull function
 		Board b = new Board();
 		for(int i = 0; i < b.boardCells.length; i++)
 		{
@@ -64,6 +70,7 @@ public class BoardTest {
 	@Test
 	public void resetBoard()
 	{
+		// Tests for the resetBoard function
 		Board b = new Board();
 		for(int i = 0; i < b.boardCells.length; i++)
 			b.fillCell(i, 'X');
@@ -77,6 +84,7 @@ public class BoardTest {
 	@Test
 	public void isAbleToWin()
 	{
+		// Tests for the isAbleToWin function
 		Board b = new Board();
 		assertEquals(-1, b.isAbleToWin('X'));
 
@@ -87,6 +95,7 @@ public class BoardTest {
 
 	public void checkForFork()
 	{
+		// Tests for the checkForFork function
 		Board b = new Board();
 		assertEquals(-1, b.checkForFork('X'));
 		b.fillCell(1, 'X');

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.146" errors="0" skipped="0" tests="6" name="is.ru.sidanna.BoardTest">
+<testsuite failures="0" time="0.004" errors="0" skipped="0" tests="1" name="is.ru.sidanna.TictactoeTest">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64"/>
@@ -60,10 +60,5 @@
     <property name="project.build.outputDirectory" value="/home/ubuntu/Sidanna/hbSidanna/target/generated-classes/cobertura"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.045" classname="is.ru.sidanna.BoardTest" name="boardFull"/>
-  <testcase time="0" classname="is.ru.sidanna.BoardTest" name="hasWon"/>
-  <testcase time="0" classname="is.ru.sidanna.BoardTest" name="isOcc"/>
-  <testcase time="0.001" classname="is.ru.sidanna.BoardTest" name="initialization"/>
-  <testcase time="0.001" classname="is.ru.sidanna.BoardTest" name="resetBoard"/>
-  <testcase time="0" classname="is.ru.sidanna.BoardTest" name="isAbleToWin"/>
+  <testcase time="0.003" classname="is.ru.sidanna.TictactoeTest" name="setPlayerTest"/>
 </testsuite>

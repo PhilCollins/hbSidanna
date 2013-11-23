@@ -60,8 +60,8 @@
     <property name="project.build.outputDirectory" value="/home/ubuntu/Sidanna/hbSidanna/target/generated-classes/cobertura"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.004" classname="is.ru.sidanna.CPUPlayerTest" name="instantiation"/>
-  <testcase time="0" classname="is.ru.sidanna.CPUPlayerTest" name="easyDifficulty"/>
-  <testcase time="0.001" classname="is.ru.sidanna.CPUPlayerTest" name="mediumDifficulty"/>
-  <testcase time="0.002" classname="is.ru.sidanna.CPUPlayerTest" name="hardDifficulty"/>
+  <testcase time="0.002" classname="is.ru.sidanna.CPUPlayerTest" name="instantiation"/>
+  <testcase time="0.001" classname="is.ru.sidanna.CPUPlayerTest" name="easyDifficulty"/>
+  <testcase time="0" classname="is.ru.sidanna.CPUPlayerTest" name="mediumDifficulty"/>
+  <testcase time="0.001" classname="is.ru.sidanna.CPUPlayerTest" name="hardDifficulty"/>
 </testsuite>

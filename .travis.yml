@@ -1,0 +1,11 @@
+language: java
+
+# blacklist
+branches:
+  except:
+    - mvn-repo
+    
+# whitelist
+branches:
+  only:
+    - master

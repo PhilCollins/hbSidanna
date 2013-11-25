@@ -33,7 +33,7 @@ public class Game {
 		System.out.println("");
 		if(board.hasWon(currPlayer.getSymbol()))
 		    {
-			System.out.println("Omg, " + currPlayer.getName() + " has won! What a genius!");
+			System.out.println("Omg, " + currPlayer.getName() + " has won! What a wizard!");
 			gameState[0] = 2;
 			if(player1 == currPlayer)
 			    board.incP1();
